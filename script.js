@@ -49,6 +49,14 @@ document.addEventListener("DOMContentLoaded", () => {
     if (nivel >= 4.0) return "Moderado";
     return "Baixo";
   }
+document.getElementById("btnCamera").addEventListener("click", async () => {
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+    document.getElementById("video").srcObject = stream;
+  } catch (err) {
+    alert("Erro ao acessar a câmera: " + err.message);
+  }
+});
 
   function atualizarEstiloPagina(risco) {
     const body = document.body;

@@ -56,6 +56,21 @@ document.addEventListener("DOMContentLoaded", () => {
     else if (risco === "Moderado") body.style.backgroundColor = "#fff5cc";
     else body.style.backgroundColor = "#e0f7fa";
   }
+async function iniciarCamera() {
+  try {
+    const video = document.getElementById("video");
+    const stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
+    video.srcObject = stream;
+  } catch (err) {
+    console.error("Erro ao acessar câmera:", err);
+    alert("Não foi possível acessar a câmera. Permita o uso no navegador.");
+  }
+}
+
+// Chama no carregamento da página
+document.addEventListener("DOMContentLoaded", () => {
+  iniciarCamera();
+});
 
   function atualizarPainel() {
     const nivel = parseFloat(gerarNivelAleatorio());

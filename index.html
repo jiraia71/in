@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Monitor de Inundações - Canoas/RS</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>🌊 Monitor de Inundações - Canoas/RS</h1>
+    <p>Atualizado em tempo real</p>
+  </header>
+
+  <main>
+    <section class="status">
+      <h2>Situação Atual</h2>
+      <div class="info">
+        <p><strong>Nível do Rio:</strong> <span id="nivel">Carregando...</span></p>
+        <p><strong>Risco de Alagamento:</strong> <span id="risco">Carregando...</span></p>
+        <p><strong>Última atualização:</strong> <span id="atualizacao">--</span></p>
+      </div>
+    </section>
+
+    <section class="mapa">
+      <h2>Mapa de Zonas de Risco</h2>
+      <iframe
+        src="https://www.google.com/maps/d/embed?mid=1xGvREuUOblDRG87MwJ9YwUYTbqE&hl=pt-BR"
+        width="100%" height="480" style="border:0;"></iframe>
+    </section>
+
+    <section class="alertas">
+      <h2>Alertas</h2>
+      <ul id="lista-alertas">
+        <li>🔴 Nenhum alerta crítico no momento</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Monitor de Inundações - Canoas/RS | Dados fornecidos por Defesa Civil</p>
+  </footer>
+</body>
+</html>
